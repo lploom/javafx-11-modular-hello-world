@@ -17,7 +17,7 @@ jar --describe-module --file build\HelloWorld.jar
 java --module-path C:\javafx-sdk-11\lib;build\HelloWorld.jar -m hellomodule/com.ameus.Main
 
 // create custom jre containing only the required modules
-jlink --module-path "%JAVA_HOME%\jmods;C:\javafx-sdk-11\lib;build\hellomodule" --add-modules hellomodule --launcher start=hellomodule/com.ameus.Main --output dist
+jlink --module-path "%JAVA_HOME%\jmods;C:\javafx-jmods-11;build\hellomodule" --add-modules hellomodule --launcher start=hellomodule/com.ameus.Main --output dist
 
 // run with the new jre using the launcher script we created in previous command
 dist\bin\start
